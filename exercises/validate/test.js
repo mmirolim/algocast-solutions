@@ -8,7 +8,7 @@ test('Validate recognizes a valid BST', () => {
   n.insert(0);
   n.insert(20);
 
-  expect(validate(n)).toEqual(true);
+    expect(validate(n)).toEqual(true);
 });
 
 test('Validate recognizes an invalid BST', () => {
@@ -19,5 +19,16 @@ test('Validate recognizes an invalid BST', () => {
   n.insert(20);
   n.left.left.right = new Node(999);
 
+    expect(validate(n)).toEqual(false);
+});
+
+test('Validate recognizes an invalid BST', () => {
+    const n = new Node(10);
+    n.insert(0);
+    n.insert(-1);
+    n.insert(4);
+
+    n.left.left.right = new Node(999);
+    
   expect(validate(n)).toEqual(false);
 });

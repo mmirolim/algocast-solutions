@@ -12,7 +12,8 @@ test('matrix produces a 2x2 array', () => {
 });
 
 test('matrix produces a 3x3 array', () => {
-  const m = matrix(3);
+    const m = matrix(3);
+    console.log(m)
   expect(m.length).toEqual(3);
   expect(m[0]).toEqual([1, 2, 3]);
   expect(m[1]).toEqual([8, 9, 4]);

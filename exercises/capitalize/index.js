@@ -7,6 +7,13 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {}
+function capitalize(str) {
+    // return str.split(' ').
+// 	reduce((a,c) => a + ' ' + String.fromCharCode(c.charCodeAt(0) - 32) + c.slice(1), '').trimLeft()
+    //
+    return str.
+	replace(/\w+/g,
+		(c) => c.charCodeAt(0) >= 97 ? String.fromCharCode(c.charCodeAt(0) - 32) + c.slice(1) : c)     
+}
 
 module.exports = capitalize;
